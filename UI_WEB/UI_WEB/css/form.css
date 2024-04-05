@@ -1,0 +1,37 @@
+*{
+    --primary: #C7C8CC;
+    --secondary: #31363F;
+}
+
+main {
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+margin: 0.5rem;
+}
+
+form {
+    border: solid 2px black;
+    width: 80rem ;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+form h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form section {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+form section div{
+  width: 100%;
+}
+
+

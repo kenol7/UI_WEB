@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UKM WEBSITE UNEJ</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/UKM_WEB/css/style.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,6 +52,7 @@ $result = mysqli_query($conn, $query);
                 <th>Jenis Kelamin</th>
                 <th>No Hp</th>
                 <th>Ukm</th>
+                <th>Foto</th>
                 <th>Action</th>
             </tr>
             <?php
@@ -68,6 +69,9 @@ $result = mysqli_query($conn, $query);
                 <td><?= $row['hp'] ?></td>
                 <td><?= $row['ukm'] ?></td>
                 <td>
+                <img src="../uploads/<?= $row['sp'] ?>" alt="" width="100px">
+                </td>
+                <td class="actionn">
                     <a type="button" class="button" href="edit.php?id=<?= $row['id'] ?>">EDIT</a> |
                     <a type="button" class="button" href="../functions.php?id=<?= $row['id'] ?>&proses=remove" onclick="return confirm('Apakah kamu yakin menghapus data NIM : <?= $row['nim'] ?> ?');">REMOVE</a>
                 </td>

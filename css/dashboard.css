@@ -15,8 +15,16 @@ main {
     margin-top: 50px;
     flex-direction: column;
     align-items: center;
+
 }
 main h1 {
     text-align: center;
     margin: 1rem;
 }
+/* 
+.actionn {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 100%;
+} */

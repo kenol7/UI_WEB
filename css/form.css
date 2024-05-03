@@ -3,12 +3,18 @@
   --secondary: #31363F;
 }
 
+body {
+  width: 100vw;
+}
+
 main {
+width: 100vw;
 height: 100vh;
 display: flex;
 flex-direction: column;
 align-items: center;
 margin: 0.5rem;
+
 }
 
 form {
@@ -30,6 +36,7 @@ width: 100%;
 display: flex;
 gap: 2rem;
 }
+
 
 form section div{
 width: 100%;

@@ -70,6 +70,12 @@ if (isset($_GET['id'])) {
                         <option value="basket" <?php if ($data['ukm'] == 'basket') { ?> selected <?php } ?>>Basket</option>
                     </select><br>
                 </div>
+                <div class="">
+                <label for="sp" class="">Foto</label>
+                <input type="hidden" name="sp" value="<?= $sp?>">
+                <input class="" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg" required />
+                </div>
+
             </section><br>
             <button class="button" id="cencel">Cencel</button>
             <button class="button" type="submit" name="proses" value="update">Update</button>

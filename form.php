@@ -26,6 +26,8 @@ require_once 'functions.php';
         </div>
     </nav>
 
+    
+
     <main>
         <form action="./functions.php" method="post" enctype="multipart/form-data">
             <h1>Masukan Data Anda</h1>
@@ -34,7 +36,7 @@ require_once 'functions.php';
                     <label for="nama">Nama:</label><br>
                     <input required type="text" id="nama" name="nama" class="inputan"><br>
                     <label for="nim">NIM:</label><br>
-                    <input required type="number" id="nim" name="nim" class="inputan"><br>
+                    <input required type="number" minlength="10" maxlength="10" id="nim" name="nim" class="inputan"><br>
                     <label for="jk">Jenis Kelamin:</label><br>
                     <select required id="jk" name="jk" class="inputan">
                         <option value="" hidden selected></option>
@@ -55,6 +57,10 @@ require_once 'functions.php';
                         <option value="basket">basket</option>
                     </select><br>
                 </div>
+                <div class="">
+                <label for="sp" class="">Foto</label>
+                <input class="" type="file" id="sp" name="sp" accept=".img, .jpeg, .png ,.jpg" require/>
+            </div>
             </section><br>
             <button class="button" id="cencel">Cencel</button>
             <button class="button" type="submit" name="proses" value="submit">Submit</button>

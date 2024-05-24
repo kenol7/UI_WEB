@@ -8,6 +8,8 @@ $routes = [];
 $routes['GET']['/'] = 'AutentikasiController@landingpage';
 $routes['GET']['/login'] = 'AutentikasiController@index';
 $routes['POST']['/login'] = 'AutentikasiController@login';
+$routes['GET']['/register'] = 'AutentikasiController@register';
+$routes['POST']['/register'] = 'AutentikasiController@registerproses';
 
 // Rute untuk mahasiswa
 $routes['GET']['/dashboard'] = 'MahasiswaController@dashboard';
@@ -16,6 +18,8 @@ $routes['GET']['/mahasiswaupdate/{id}'] = 'MahasiswaController@formupdate';
 $routes['POST']['/createmahasiswa'] = 'MahasiswaController@create';
 $routes['POST']['/updatemahasiswa/{id}'] = 'MahasiswaController@update';
 $routes['GET']['/deletemahasiswa/{id}'] = 'MahasiswaController@delete';
+
+
 
 
 ?>

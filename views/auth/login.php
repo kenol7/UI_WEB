@@ -15,7 +15,7 @@
 <body>
     <?php include 'views/components/navigation.php' ?>
     <main>
-        <form action="/login" method="POST">
+        <form action="login" method="POST">
             <h1>LOGIN FOR ADMIN</h1>
             <div>
                 <input type="text" name="username" id="username" class="inputan" placeholder="Username" required><br>

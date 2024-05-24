@@ -4,22 +4,45 @@ require_once "function/function.php";
 
 class AutentikasiController
 {
+  public function __construct(){
+    
+  }
   public function register()
   {
+    session_start();
+    if (isset($_SESSION['username'])) {
+      header('Location: /dashboard');
+      exit();
+    }
     loadView('auth/register');
   }
   public function landingpage()
   {
+    session_start();
+    if (isset($_SESSION['username'])) {
+      header('Location: /dashboard');
+      exit();
+    }
     loadView('landingpage');
   }
 
   public function index()
   {
+    session_start();
+    if (isset($_SESSION['username'])) {
+      header('Location: /dashboard');
+      exit();
+    }
     loadView('auth/login');
   }
 
   public function registerproses()
   {
+    session_start();
+    if (isset($_SESSION['username'])) {
+      header('Location: /dashboard');
+      exit();
+    }
     $nama = $_POST["nama"];
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -39,6 +62,11 @@ class AutentikasiController
 
   public function login()
   {
+    session_start();
+    if (isset($_SESSION['username'])) {
+      header('Location: /dashboard');
+      exit();
+    }
     $username = $_POST["username"];
     $password = $_POST["password"];
 
@@ -53,4 +81,17 @@ class AutentikasiController
       <button><strong><a href='/'>KEMBALI</a></strong></button></center>";
     }
   }
+  public function logout()
+  {
+    global $url;
+    session_start();
+    if (!isset($_SESSION['username'])) {
+      header('Location: /login');
+      exit();
+    }
+    session_unset();
+    session_destroy();
+    header('Location:/login');
+  }
 }
+

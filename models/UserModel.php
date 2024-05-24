@@ -10,9 +10,9 @@ class UserModel
     $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
-      return 1;
+      return true;
     } else {
-      return 0;
+      return false;
     }
   }
   static function register($nama, $username, $password)

@@ -10,6 +10,8 @@ $routes['GET']['/login'] = 'AutentikasiController@index';
 $routes['POST']['/login'] = 'AutentikasiController@login';
 $routes['GET']['/register'] = 'AutentikasiController@register';
 $routes['POST']['/register'] = 'AutentikasiController@registerproses';
+$routes['GET']['/logout'] = 'AutentikasiController@logout';
+
 
 // Rute untuk mahasiswa
 $routes['GET']['/dashboard'] = 'MahasiswaController@dashboard';

@@ -7,8 +7,14 @@ class MahasiswaController
 
   public function dashboard()
   {
-    $data = MahasiswaModel::read();
-    loadView('dashboard', $data);
+    session_start();
+    if (!isset($_SESSION['username'])) {
+      header('Location: /login');
+      exit();
+    }else {
+      $data = MahasiswaModel::read();
+      loadView('dashboard', $data);
+    }
   }
 
   public function formcreate()
